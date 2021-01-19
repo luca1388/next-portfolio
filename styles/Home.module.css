@@ -7,13 +7,59 @@
   align-items: center;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.leftHeader {
+  width: 50%;
+  height: 100%;
+  flex: 1;
+  background-color: #fff;
+}
+
+.rightHeader {
+  width: 50%;
+  height: 100%;
+  flex: 1;
+  background-color: #036d80;
+}
+
+.circle {
+  border-radius: 100%;
+  width: 18rem;
+  background-color: rebeccapurple;
+  height: 18rem;
+  position: absolute;
+  background-image: url("/morata.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+.name {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .footer {
