@@ -17,6 +17,35 @@ export default function Home() {
           <div className={styles.name}><h1>Alvaro Morata</h1></div>
           <div className={styles.rightHeader}></div>
         </header>
+        <section className={styles.about}>
+          <h2 className={styles.aboutMe}>About me</h2>
+          <ul className={styles.social}>
+            <li>Linkedin</li>
+            <li>Twitter</li>
+            <li>Github</li>
+            <li>Unsplash</li>
+          </ul>
+        </section>
+        <section className={styles.counter}>
+          <div className={styles.counterRow}>
+            <div className={styles.skillCard}>
+              <div>12</div>
+              <div>Years Experience</div>
+            </div>
+            <div className={styles.skillCard}>
+              <div>12</div>
+              <div>Years Experience</div>
+            </div>
+            <div className={styles.skillCard}>
+              <div>12</div>
+              <div>Years Experience</div>
+            </div>
+            <div className={styles.skillCard}>
+              <div>12</div>
+              <div>Years Experience</div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   )

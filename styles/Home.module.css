@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +13,56 @@
   align-items: center;
   width: 100%;
   height: 100vh;
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMe {
+  margin: 4.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0 5rem;
+  width: 100%;
+}
+
+.counter {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #4830e6;
+  width: 100%;
+}
+
+.counterRow {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 32px;
+  padding-left: 32px;
+  display: flex;
+}
+
+.skillCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+    padding-right: 8px;
+    padding-left: 8px;
 }
 
 .leftHeader {
