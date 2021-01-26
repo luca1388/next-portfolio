@@ -11,14 +11,16 @@ export default function Home() {
 
       <main className={styles.main}>
         <header className={styles.header}>
-          <div className={styles.leftHeader}></div>
+          <div className={styles.leftHeader}>
+        
+          </div>
           <div className={styles.circle}></div>
           <div className={styles.intro}>
             {/* <h1>Welcome to the jungle</h1> */}
           </div>
           <div className={styles.name}>
             <h1>Luca Gandini</h1>
-            <h3>Front end developer</h3>
+            <h5>Front end developer</h5>
           </div>
           <div className={styles.rightHeader}></div>
         </header>
