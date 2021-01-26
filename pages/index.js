@@ -14,10 +14,11 @@ export default function Home() {
           <div className={styles.leftHeader}></div>
           <div className={styles.circle}></div>
           <div className={styles.intro}>
-            <h1>Welcome to the jungle</h1>
+            {/* <h1>Welcome to the jungle</h1> */}
           </div>
           <div className={styles.name}>
-            <h1>Alvaro Morata</h1>
+            <h1>Luca Gandini</h1>
+            <h3>Front end developer</h3>
           </div>
           <div className={styles.rightHeader}></div>
         </header>
@@ -77,19 +78,19 @@ export default function Home() {
         <section className={styles.counter}>
           <div className={styles.counterRow}>
             <div className={styles.skillCard}>
-              <div>12</div>
+              <div>1</div>
               <div>Years Experience</div>
             </div>
             <div className={styles.skillCard}>
-              <div>12</div>
+              <div>1</div>
               <div>Years Experience</div>
             </div>
             <div className={styles.skillCard}>
-              <div>12</div>
+              <div>1</div>
               <div>Years Experience</div>
             </div>
             <div className={styles.skillCard}>
-              <div>12</div>
+              <div>1</div>
               <div>Years Experience</div>
             </div>
           </div>
