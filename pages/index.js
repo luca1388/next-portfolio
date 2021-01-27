@@ -129,10 +129,12 @@ export default function Home({ repos }) {
         <section>
           {repos.map((repository) => (
             <RepoCard
+              key={repository.id}
               name={repository.name}
               description={repository.description}
               language={repository.language}
               created_at={repository.created_at}
+              contents_url={repository.contents_url}
             />
           ))}
         </section>
