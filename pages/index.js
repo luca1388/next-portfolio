@@ -80,20 +80,20 @@ export default function Home() {
         <section className={styles.counter}>
           <div className={styles.counterRow}>
             <div className={styles.skillCard}>
-              <div>1</div>
-              <div>Years Experience</div>
+              <div className={styles.skillNumber}>{ new Date().getFullYear() - new Date('2012-11-27').getFullYear()}</div>
+              <div className={styles.skillName}>Years Experience</div>
             </div>
             <div className={styles.skillCard}>
-              <div>1</div>
-              <div>Years Experience</div>
+              <div className={styles.skillNumber}>1</div>
+              <div className={styles.skillName}>Years Experience</div>
             </div>
             <div className={styles.skillCard}>
-              <div>1</div>
-              <div>Years Experience</div>
+              <div className={styles.skillNumber}>1</div>
+              <div className={styles.skillName}>Years Experience</div>
             </div>
             <div className={styles.skillCard}>
-              <div>1</div>
-              <div>Years Experience</div>
+              <div className={styles.skillNumber}>1</div>
+              <div className={styles.skillName}>Years Experience</div>
             </div>
           </div>
         </section>

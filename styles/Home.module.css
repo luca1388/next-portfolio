@@ -113,6 +113,14 @@
     padding-left: 8px;
 }
 
+.skillNumber {
+  font-size: 48px;
+}
+
+.skillName {
+  font-size: 24px;
+}
+
 .leftHeader {
   width: 50%;
   height: 100%;
