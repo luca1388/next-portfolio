@@ -133,7 +133,7 @@ export default function Home({ repos }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps() {
   const response = await fetch("https://api.github.com/users/luca1388/repos");
   const repos = await response.json();
 
