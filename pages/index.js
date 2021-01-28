@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "../components/header/header";
 import RepoCard from "../components/RepoCard/RepoCard";
 import styles from "../styles/Home.module.css";
 
@@ -12,18 +13,7 @@ export default function Home({ repos }) {
       </Head>
 
       <main className={styles.main}>
-        <header className={styles.header}>
-          <div className={styles.leftHeader}></div>
-          <div className={styles.circle}></div>
-          <div className={styles.intro}>
-            {/* <h1>Welcome to the jungle</h1> */}
-          </div>
-          <div className={styles.name}>
-            <h1>Luca Gandini</h1>
-            <h5>Front end developer</h5>
-          </div>
-          <div className={styles.rightHeader}></div>
-        </header>
+        <Header name="Luca Gandini" position="Front end developer" />
         <section className={styles.about}>
           <div className={styles.contacts}>
             <h2 className={styles.aboutMe}>About me</h2>
