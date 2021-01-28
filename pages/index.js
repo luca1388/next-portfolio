@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Description from "../components/description/description";
 import Header from "../components/header/header";
 import RepoCard from "../components/RepoCard/RepoCard";
 import styles from "../styles/Home.module.css";
@@ -80,18 +81,7 @@ export default function Home({ repos }) {
               </li>
             </ul>
           </div>
-          <div className={styles.abstract}>
-            <p className={styles.abstractMessage}>
-              Hello, I am a frontend developer... Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum
-            </p>
-          </div>
+          <Description />
         </section>
         <section className={styles.counter}>
           <div className={styles.counterRow}>
