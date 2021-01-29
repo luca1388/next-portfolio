@@ -1,0 +1,53 @@
+
+.base {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 80px solid white;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    perspective: 90px;
+}
+
+.step {
+    height: 30px;
+    background-color: white;
+}
+
+.skills {
+    text-align: center;
+    position: absolute;
+
+    bottom: -55px;
+    transform: rotateX(50deg) translateZ(-10px);
+}
+
+/* .firstSkillRow {
+    bottom: 5px;
+}
+.secondSkillRow {
+    bottom: 20px;
+}
+.thirdSkillRow {
+    bottom: 30px;
+} */
+
+.firstStep {
+    width: 200px;
+}
+
+.secondStep {
+    width: 150px;
+}
+
+.thirdStep {
+    width: 100px;
+}
+
+.fourthStep {
+    width: 50px;
+}
