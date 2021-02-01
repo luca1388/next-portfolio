@@ -9,6 +9,14 @@ const NapoleonIcon = () => (
                 Gatsby &middot; Nextjs &middot; React Native <br />
                 Javascript &middot; CSS &middot; HTML &middot; React <br />
             </div>
+            <div className={styles.N}>
+                <div className={styles.hat}></div>
+                <div className={styles.body}>
+                    {/* <div className={styles.handOfJustice}></div> */}
+                    {/* <div className={styles.arm}></div>
+                    <div className={styles.hand}></div> */}
+                </div>
+            </div>
             <div className={cn(styles.fourthStep, styles.step)}></div>
             <div className={cn(styles.thirdStep, styles.step)}></div>
             <div className={cn(styles.secondStep, styles.step)}></div>
