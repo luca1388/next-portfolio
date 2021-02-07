@@ -5,7 +5,6 @@ import RepoCard from "../components/RepoCard/RepoCard";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ repos }) {
-  console.log(repos);
   return (
     <div className={styles.container}>
       <Head>
@@ -114,7 +113,7 @@ export default function Home({ repos }) {
               description={repository.description}
               language={repository.language}
               created_at={repository.created_at}
-              contents_url={repository.contents_url}
+              preview={repository.download_url}
             />
           ))}
         </section>
@@ -124,8 +123,23 @@ export default function Home({ repos }) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch("https://api.github.com/users/luca1388/repos");
+  const response = await fetch("https://api.github.com/users/luca1388/repos", {
+    headers: {
+      'Authorization': `token ${process.env.GITHUB_TOKEN}`
+    }
+  });
   const repos = await response.json();
+
+  for (let repo of repos) {
+    let resp = await fetch(repo.contents_url.replace("{+path}", "preview.jpg"), {
+      headers: {
+        'Authorization': `token ${process.env.GITHUB_TOKEN}`
+      }
+    });
+    let data = await resp.json();
+
+    repo.download_url = data.download_url ?? null;
+  }
 
   return {
     props: {
