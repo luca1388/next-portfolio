@@ -129,6 +129,7 @@ export async function getStaticProps() {
     }
   });
   const repos = await response.json();
+  console.log(repos);
 
   for (let repo of repos) {
     let resp = await fetch(repo.contents_url.replace("{+path}", "preview.jpg"), {
