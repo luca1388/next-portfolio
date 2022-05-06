@@ -1,3 +1,5 @@
+import styles from "./RepoCard.module.css";
+
 const RepoCard = ({
   name,
   updated_at,
@@ -7,12 +9,14 @@ const RepoCard = ({
   preview,
 }) => {
   return (
-    <div>
+    <div className={styles.RepoCard}>
       <h2>{name}</h2>
-      <h3>{language}</h3>
-      {preview && <img src={preview} alt={name} width="20%" />}
-      <p>{description}</p>
-      <h5>Creation: {created_at}</h5>
+      {/* <h3>{language}</h3> */}
+      {preview && <img src={preview} alt={name} width="100%" />}
+      <p className={styles.description}>
+        {description} (<b>{language}</b>)
+      </p>
+      <h5>{new Date(created_at).toLocaleDateString()}</h5>
     </div>
   );
 };

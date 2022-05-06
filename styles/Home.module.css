@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.repositories {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #a72d40;
+  padding: 64px 0;
+}
 
 .about {
   width: 100%;

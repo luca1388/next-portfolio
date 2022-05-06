@@ -1,5 +1,5 @@
-import NapoleonIcon from '../napoleonIcon/NapoleonIcon';
-import styles from './header.module.css';
+import NapoleonIcon from "../napoleonIcon/NapoleonIcon";
+import styles from "./header.module.css";
 
 const Header = ({ name, position }) => {
   return (

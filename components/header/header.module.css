@@ -29,11 +29,11 @@
 
 .circle {
   border-radius: 100%;
-  width: 18rem;
+  width: 15rem;
   background-color: rebeccapurple;
-  height: 18rem;
+  height: 15rem;
   position: absolute;
-  background-image: url("/morata.jpg");
+  background-image: url("/photo1651846401.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

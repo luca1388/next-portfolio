@@ -13,7 +13,7 @@ export default function Home({ repos }) {
       </Head>
 
       <main className={styles.main}>
-        <Header name="Luca Gandini" position="Front end developer" />
+        <Header name="Luca Gandini" position="Front end engineer" />
         <section className={styles.about}>
           <div className={styles.contacts}>
             <h2 className={styles.aboutMe}>About me</h2>
@@ -105,7 +105,7 @@ export default function Home({ repos }) {
             </div>
           </div>
         </section>
-        <section>
+        <section className={styles.repositories}>
           {repos.map((repository) => (
             <RepoCard
               key={repository.id}
@@ -125,18 +125,21 @@ export default function Home({ repos }) {
 export async function getStaticProps() {
   const response = await fetch("https://api.github.com/users/luca1388/repos", {
     headers: {
-      'Authorization': `token ${process.env.GITHUB_TOKEN}`
-    }
+      Authorization: `token ${process.env.GITHUB_TOKEN}`,
+    },
   });
   const repos = await response.json();
   console.log(repos);
 
   for (let repo of repos) {
-    let resp = await fetch(repo.contents_url.replace("{+path}", "preview.jpg"), {
-      headers: {
-        'Authorization': `token ${process.env.GITHUB_TOKEN}`
+    let resp = await fetch(
+      repo.contents_url.replace("{+path}", "preview.jpg"),
+      {
+        headers: {
+          Authorization: `token ${process.env.GITHUB_TOKEN}`,
+        },
       }
-    });
+    );
     let data = await resp.json();
 
     repo.download_url = data.download_url ?? null;
