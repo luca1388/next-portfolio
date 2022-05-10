@@ -97,7 +97,7 @@ export default function Home({ repos }) {
             </div>
             <div className={styles.skillCard}>
               <div className={styles.skillNumber}>3</div>
-              <div className={styles.skillName}>Active Telegram Bots</div>
+              <div className={styles.skillName}>Telegram Bots</div>
             </div>
             <div className={styles.skillCard}>
               <div className={styles.skillNumber}>2</div>

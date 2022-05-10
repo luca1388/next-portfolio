@@ -23,3 +23,9 @@
 
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .abstractMessage {
+    width: 100%;
+  }
+}

@@ -209,3 +209,19 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 768px) {
+  .contacts {
+    width: 100%;
+    margin: 0;
+  }
+  .skillCard {
+    padding: 0;
+  }
+  .counterRow {
+    padding: 4px;
+  }
+  .skillName {
+    font-size: 20px;
+  }
+}
