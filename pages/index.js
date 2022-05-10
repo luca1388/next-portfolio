@@ -93,11 +93,11 @@ export default function Home({ repos }) {
             </div>
             <div className={styles.skillCard}>
               <div className={styles.skillNumber}>2</div>
-              <div className={styles.skillName}>Live projects</div>
+              <div className={styles.skillName}>Live websites</div>
             </div>
             <div className={styles.skillCard}>
-              <div className={styles.skillNumber}>1</div>
-              <div className={styles.skillName}>Years Experience</div>
+              <div className={styles.skillNumber}>3</div>
+              <div className={styles.skillName}>Active Telegram Bots</div>
             </div>
             <div className={styles.skillCard}>
               <div className={styles.skillNumber}>2</div>
