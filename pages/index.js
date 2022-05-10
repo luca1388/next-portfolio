@@ -92,16 +92,16 @@ export default function Home({ repos }) {
               <div className={styles.skillName}>Years Experience</div>
             </div>
             <div className={styles.skillCard}>
-              <div className={styles.skillNumber}>1</div>
-              <div className={styles.skillName}>Years Experience</div>
+              <div className={styles.skillNumber}>2</div>
+              <div className={styles.skillName}>Live projects</div>
             </div>
             <div className={styles.skillCard}>
               <div className={styles.skillNumber}>1</div>
               <div className={styles.skillName}>Years Experience</div>
             </div>
             <div className={styles.skillCard}>
-              <div className={styles.skillNumber}>1</div>
-              <div className={styles.skillName}>Years Experience</div>
+              <div className={styles.skillNumber}>2</div>
+              <div className={styles.skillName}>Pets</div>
             </div>
           </div>
         </section>
@@ -114,6 +114,9 @@ export default function Home({ repos }) {
               language={repository.language}
               created_at={repository.created_at}
               preview={repository.download_url}
+              repositoryUrl={repository.html_url}
+              demoUrl={repository.homepage}
+              isNpmPackage={npmPackageReposName.indexOf(repository.name) > -1}
             />
           ))}
         </section>
@@ -122,14 +125,31 @@ export default function Home({ repos }) {
   );
 }
 
+const excludeReposName = [
+  "portfolio",
+  "next-portfolio",
+  "memoryJS",
+  "customer-website",
+  "WebpackPostBuildScriptPlugin",
+  "gatsby-landing-page-demo",
+];
+
+const npmPackageReposName = [
+  "create-express-react-app",
+  "propertiesToJSON",
+  "obj-functions",
+];
+
 export async function getStaticProps() {
   const response = await fetch("https://api.github.com/users/luca1388/repos", {
     headers: {
       Authorization: `token ${process.env.GITHUB_TOKEN}`,
     },
   });
-  const repos = await response.json();
-  console.log(repos);
+
+  let repos = await response.json();
+
+  repos = repos.filter((repo) => excludeReposName.indexOf(repo.name) < 0);
 
   for (let repo of repos) {
     let resp = await fetch(
