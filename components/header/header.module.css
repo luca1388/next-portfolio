@@ -8,7 +8,8 @@
 
 .leftHeader {
   width: 50%;
-  height: 100vh;
+
+  height: 100%;
   flex: 1;
   background-color: #1d2228;
   display: flex;
@@ -18,7 +19,7 @@
 
 .rightHeader {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   flex: 1;
   /* background-color: #036d80; */
   background-color: #ff9d00;
@@ -63,14 +64,18 @@
 }
 
 @media (max-width: 768px) {
+  .rightHeader {
+    background-attachment: initial;
+  }
   .circle {
     height: 8rem;
     width: 8rem;
     /* top: 30%; */
+    display: none;
   }
   .leftHeader {
-    flex: 0;
-    width: 0%;
+    /* flex: 0;
+    width: 0%; */
   }
   .name {
     color: white;
@@ -84,11 +89,20 @@
 
 @media (max-width: 400px) {
   .circle {
-    /* top: 25%; */
+    display: none;
   }
   .name {
     text-align: center;
     top: 0;
+  }
+  .name h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+  .circle {
+    display: none;
   }
   .name h1 {
     font-size: 2.5rem;

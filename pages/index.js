@@ -13,7 +13,6 @@ export default function Home({ repos }) {
   const bugsVisible = useIntersection(bugsRef);
   const [animationRun, setAnimationRun] = useState(false);
   useEffect(() => {
-    console.log(bugsVisible);
     if (!animationRun) {
       animateValue(bugsRef.current, 1, 214, 5000, "&#8734;");
       setAnimationRun(true);
