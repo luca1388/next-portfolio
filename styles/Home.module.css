@@ -14,6 +14,7 @@
   flex-wrap: wrap;
   background-color: #a72d40;
   padding: 64px 0;
+  width: 100%;
 }
 
 .about {
@@ -223,5 +224,8 @@
   }
   .skillName {
     font-size: 20px;
+  }
+  .repositories {
+    padding: 24px;
   }
 }

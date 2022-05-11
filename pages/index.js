@@ -15,7 +15,7 @@ export default function Home({ repos }) {
   useEffect(() => {
     console.log(bugsVisible);
     if (!animationRun) {
-      animateValue(bugsRef.current, 1, 214, 5000, "lot of");
+      animateValue(bugsRef.current, 1, 214, 5000, "&#8734;");
       setAnimationRun(true);
     }
   }, [bugsVisible, animationRun]);
@@ -112,7 +112,7 @@ export default function Home({ repos }) {
                 {new Date().getFullYear() -
                   new Date("2012-11-27").getFullYear()}
               </div>
-              <div className={styles.skillName}>Years Experience</div>
+              <div className={styles.skillName}>Years experience</div>
             </div>
             <div className={styles.skillCard}>
               <div className={styles.skillNumber}>2</div>
@@ -126,9 +126,7 @@ export default function Home({ repos }) {
               <div ref={virusRef} className={styles.skillNumber}>
                 0
               </div>
-              <div className={styles.skillName}>
-                Virus detected on this site
-              </div>
+              <div className={styles.skillName}>Virus detected</div>
             </div>
             <div className={styles.skillCard}>
               <div ref={bugsRef} className={styles.skillNumber}>
