@@ -33,7 +33,7 @@
   background-color: rebeccapurple;
   height: 15rem;
   position: absolute;
-  background-image: url("/photo1651846401.jpeg");
+  background-image: url("/photo1651846401cartoon.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -73,6 +73,7 @@
   .name {
     color: white;
     right: initial;
+    top: 2%;
   }
   .name h5 {
     text-align: center;

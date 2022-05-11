@@ -10,7 +10,6 @@ const RepoCard = ({
   repositoryUrl,
   demoUrl,
 }) => {
-  console.log(isNpmPackage);
   const imageURL = isNpmPackage ? "/npm.png" : preview;
   return (
     <div className={styles.RepoCard}>

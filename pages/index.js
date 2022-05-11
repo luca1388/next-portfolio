@@ -1,10 +1,33 @@
 import Head from "next/head";
+import { useEffect, useRef, useState } from "react";
+import { animateValue } from "../common/domUtils";
+import { useIntersection } from "../common/useIntersection";
 import Description from "../components/description/description";
 import Header from "../components/header/header";
 import RepoCard from "../components/RepoCard/RepoCard";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ repos }) {
+  const bugsRef = useRef();
+  const virusRef = useRef();
+  const bugsVisible = useIntersection(bugsRef);
+  const [animationRun, setAnimationRun] = useState(false);
+  useEffect(() => {
+    console.log(bugsVisible);
+    if (!animationRun) {
+      animateValue(bugsRef.current, 1, 214, 5000, "lot of");
+      setAnimationRun(true);
+    }
+  }, [bugsVisible, animationRun]);
+
+  const virusDetected = () => {
+    virusRef.current.innerHTML = 1;
+  };
+
+  const virusRemoved = () => {
+    virusRef.current.innerHTML = 0;
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -93,15 +116,25 @@ export default function Home({ repos }) {
             </div>
             <div className={styles.skillCard}>
               <div className={styles.skillNumber}>2</div>
-              <div className={styles.skillName}>Live websites</div>
+              <div className={styles.skillName}>Personal projects</div>
+            </div>
+            <div
+              className={styles.skillCard}
+              onMouseOver={virusDetected}
+              onMouseLeave={virusRemoved}
+            >
+              <div ref={virusRef} className={styles.skillNumber}>
+                0
+              </div>
+              <div className={styles.skillName}>
+                Virus detected on this site
+              </div>
             </div>
             <div className={styles.skillCard}>
-              <div className={styles.skillNumber}>3</div>
-              <div className={styles.skillName}>Telegram Bots</div>
-            </div>
-            <div className={styles.skillCard}>
-              <div className={styles.skillNumber}>2</div>
-              <div className={styles.skillName}>Pets</div>
+              <div ref={bugsRef} className={styles.skillNumber}>
+                0
+              </div>
+              <div className={styles.skillName}>Bugs to fix</div>
             </div>
           </div>
         </section>
