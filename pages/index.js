@@ -14,7 +14,7 @@ export default function Home({ repos }) {
   const [animationRun, setAnimationRun] = useState(false);
   useEffect(() => {
     if (!animationRun) {
-      animateValue(bugsRef.current, 1, 214, 5000, "&#8734;");
+      animateValue(bugsRef.current, 1, 214, 8000, "&#8734;");
       setAnimationRun(true);
     }
   }, [bugsVisible, animationRun]);
