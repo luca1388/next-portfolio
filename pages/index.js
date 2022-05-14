@@ -164,7 +164,7 @@ export default function Home({ repos }) {
           {"\u00A0"}
           <a
             target={"_blank"}
-            href="mailto:luca.gandini88@gmail.com?subject=Big%20News&body=Body-goes-here"
+            href="mailto:luca.gandini88@gmail.com?subject=Reaching%20you%20from%20portfolio"
           >
             {`Contact me 📩 `}
           </a>
