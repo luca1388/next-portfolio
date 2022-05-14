@@ -12,9 +12,37 @@
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 24px;
+}
+
+.repositoriesSection {
   background-color: #a72d40;
   padding: 64px 0;
   width: 100%;
+}
+
+.repositoriesSection h2.heading {
+  /* color: #ffffff; */
+  text-shadow: 2px 4px #7f345d;
+  padding: 0 3rem 3rem;
+  margin: 0;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio p {
+  color: white;
+  width: 70%;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  margin: 0;
+  padding: 0 2rem 2rem;
 }
 
 .about {
@@ -35,6 +63,12 @@
   width: 100%;
 }
 
+.heading {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .social {
   display: flex;
   justify-content: space-between;
@@ -45,10 +79,10 @@
   min-width: 300px;
 }
 
-.listItem {
-  /* padding: 10px;
-  width: 100%; */
-}
+/* .listItem {
+  padding: 10px;
+  width: 100%;
+} */
 
 .contacts {
   flex-direction: column;
@@ -107,22 +141,14 @@
 }
 
 .footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .footer img {
   margin-left: 0.5rem;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer a:hover {
+  text-decoration: underline;
 }
 
 .title a {
@@ -202,6 +228,20 @@
 
 .logo {
   height: 1em;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #1d2228;
+  color: white;
+  width: 100%;
 }
 
 @media (max-width: 600px) {

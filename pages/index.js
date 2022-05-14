@@ -13,10 +13,10 @@ export default function Home({ repos }) {
   const bugsVisible = useIntersection(bugsRef);
   const [animationRun, setAnimationRun] = useState(false);
   useEffect(() => {
-    if (!animationRun) {
-      animateValue(bugsRef.current, 1, 214, 8000, "&#8734;");
-      setAnimationRun(true);
-    }
+    // if (!animationRun) {
+    animateValue(bugsRef.current, 1, 214, 5000, "&#8734;");
+    setAnimationRun(true);
+    // }
   }, [bugsVisible, animationRun]);
 
   const virusDetected = () => {
@@ -115,7 +115,7 @@ export default function Home({ repos }) {
             </div>
             <div className={styles.skillCard}>
               <div className={styles.skillNumber}>2</div>
-              <div className={styles.skillName}>Personal projects</div>
+              <div className={styles.skillName}>Deployed apps</div>
             </div>
             <div
               className={styles.skillCard}
@@ -125,7 +125,7 @@ export default function Home({ repos }) {
               <div ref={virusRef} className={styles.skillNumber}>
                 0
               </div>
-              <div className={styles.skillName}>Virus detected</div>
+              <div className={styles.skillName}>Virus here!</div>
             </div>
             <div className={styles.skillCard}>
               <div ref={bugsRef} className={styles.skillNumber}>
@@ -135,21 +135,40 @@ export default function Home({ repos }) {
             </div>
           </div>
         </section>
-        <section className={styles.repositories}>
-          {repos.map((repository) => (
-            <RepoCard
-              key={repository.id}
-              name={repository.name}
-              description={repository.description}
-              language={repository.language}
-              created_at={repository.created_at}
-              preview={repository.download_url}
-              repositoryUrl={repository.html_url}
-              demoUrl={repository.homepage}
-              isNpmPackage={npmPackageReposName.indexOf(repository.name) > -1}
-            />
-          ))}
+        <section className={styles.repositoriesSection}>
+          <div className={styles.portfolio}>
+            <h2 className={styles.heading}>Portfolio</h2>
+            <p>
+              Here you can find some playground projects coming from my Github
+              account.
+            </p>
+          </div>
+          <div className={styles.repositories}>
+            {repos.map((repository) => (
+              <RepoCard
+                key={repository.id}
+                name={repository.name}
+                description={repository.description}
+                language={repository.language}
+                created_at={repository.created_at}
+                preview={repository.download_url}
+                repositoryUrl={repository.html_url}
+                demoUrl={repository.homepage}
+                isNpmPackage={npmPackageReposName.indexOf(repository.name) > -1}
+              />
+            ))}
+          </div>
         </section>
+        <footer className={styles.footer}>
+          {`© ${new Date().getFullYear()} lucagandini.dev All Rights Reserved\u00A0|`}
+          {"\u00A0"}
+          <a
+            target={"_blank"}
+            href="mailto:luca.gandini88@gmail.com?subject=Big%20News&body=Body-goes-here"
+          >
+            {`Contact me 📩 `}
+          </a>
+        </footer>
       </main>
     </div>
   );
