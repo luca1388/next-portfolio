@@ -5,8 +5,6 @@ import styles from "./header.module.css";
 const Header = ({ name, position }) => {
   const headerRef = useRef();
   const fixHeight = (event) => {
-    console.log(event);
-    console.log(window.innerHeight);
     headerRef.current.style.height = window.innerHeight + "px";
   };
   useEffect(() => {
