@@ -140,7 +140,9 @@
   width: 100%;
 }
 
-.footer {
+.footer span {
+  text-align: center;
+  line-height: 24px;
 }
 
 .footer img {
@@ -267,5 +269,8 @@
   }
   .repositories {
     padding: 24px;
+  }
+  .footer span {
+    font-size: 14px;
   }
 }

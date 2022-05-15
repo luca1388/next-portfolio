@@ -160,14 +160,16 @@ export default function Home({ repos }) {
           </div>
         </section>
         <footer className={styles.footer}>
-          {`© ${new Date().getFullYear()} lucagandini.dev All Rights Reserved\u00A0|`}
-          {"\u00A0"}
-          <a
-            target={"_blank"}
-            href="mailto:luca.gandini88@gmail.com?subject=Reaching%20you%20from%20portfolio"
-          >
-            {`Contact me 📩 `}
-          </a>
+          <span>
+            {`© ${new Date().getFullYear()} lucagandini.dev All Rights Reserved\u00A0|`}
+            {"\u00A0"}
+            <a
+              target={"_blank"}
+              href="mailto:luca.gandini88@gmail.com?subject=Reaching%20you%20from%20portfolio"
+            >
+              {`Contact me 📩 `}
+            </a>
+          </span>
         </footer>
       </main>
     </div>
