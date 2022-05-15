@@ -21,7 +21,6 @@ function MyApp({ Component, pageProps }) {
           </Script>
         </>
       )}
-      <link rel="manifest" href="manifest.json" />
       <Component {...pageProps} />
     </>
   );

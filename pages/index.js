@@ -32,6 +32,7 @@ export default function Home({ repos }) {
       <Head>
         <title>Luca Gandini Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
       </Head>
 
       <main className={styles.main}>
