@@ -117,7 +117,7 @@ export default function Home({ repos }) {
             </div>
             <div className={styles.skillCard}>
               <div className={styles.skillNumber}>2</div>
-              <div className={styles.skillName}>Deployed apps</div>
+              <div className={styles.skillName}>Maintained apps</div>
             </div>
             <div
               className={styles.skillCard}
